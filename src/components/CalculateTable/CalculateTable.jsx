@@ -2,6 +2,7 @@ import React from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 import Table from "../UI/Table";
+// this component not have css module
 
 function CalculateTable({ data, initialInvestment }) {
   return (

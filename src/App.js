@@ -1,7 +1,7 @@
 import { useState } from "react";
-import logo from "./assets/investment-calculator-logo.png";
 import CalculateForm from "./components/CalculateForm/CalculateForm";
 import CalculateTable from "./components/CalculateTable/CalculateTable";
+import Header from "./components/Header/Header";
 
 function App() {
   const [userInput, setUserInput] = useState([]);
@@ -32,16 +32,8 @@ function App() {
 
   return (
     <div>
-      <header className="header">
-        <img src={logo} alt="logo" />
-        <h1>Investment Calculator</h1>
-      </header>
-
+      <Header />
       <CalculateForm calculateHandler={calculateHandler} />
-
-      {/* Todo: Show below table conditionally (only once result data is available) */}
-      {/* Show fallback text if no data is available */}
-
       <CalculateTable
         data={yearlyData}
         initialInvestment={userInput["current-savings"]}
